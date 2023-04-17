@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function footToMeter(foot){
+      let meter;
+      meter = 0.305 * foot;
+      return meter;
+  }
+  function meterToFoot(meter){
+      let foot;
+      foot = 3.279 * meter;
+      return foot;
+  }
+  let fot= parseInt(prompt('nhap so foot',''));
+  alert(fot + " foot " + "=" + footToMeter(fot) + " meter ");
+  let met=parseInt(prompt('nhap so meter',''));
+  alert(met + " meter " + "=" + meterToFoot(met) + " foot ");
+</script>

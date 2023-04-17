@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // function giaithua(N) {
+    //   let result = 1;
+    //   for (let i = 1; i <= N; i++) {
+    //     result *= i;
+    //   }
+    //   return result;
+    // }
+    // N=parseInt(prompt('Nhap so',''));
+    // let result = giaithua(N);
+    // alert(result);
+    function func1(a){
+      if(a === 2) return 2;
+      return a * func1(a - 1);
+    }
+    alert(func1(5))
+</script>

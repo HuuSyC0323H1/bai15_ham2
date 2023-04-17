@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let number = prompt('nhap','');
+    kiemtra(number);
+    function kiemtra(number){
+        let check=true;
+        if (number===0){
+            alert(number+'ko phai');
+        }else {
+            for (let i=2;i<number;i++){
+                check = false;
+                break;
+            }
+            if (check){
+                alert(number+'la so nt');
+            }else {
+                alert(number+'ko phai');
+            }
+        }
+    }
+</script>
