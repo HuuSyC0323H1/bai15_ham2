@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border-bottom: solid blue 1px;;
+        }
+
+        form {
+            width: 98%;
+            display: block;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<form method="get">
+    <h1>Quan ly san pham</h1>
+    <hr>
+    Information
+    <p>Ten san pham:</p>
+    <input type="number" name="index" id="index" value="" hidden="true">
+    <input id="name" placeholder="nhap ten san pham" size="105px">
+    <p>Hang:</p>
+    <select id="magaer"  style="width: 100px">
+        <option value="">-- Choose --</option>
+    </select>
+    <p>So luong:</p>
+    <input id="soluong" placeholder="so luong san pham" size="105px">
+    <p>
+        <button onclick="them()">Add</button>
+        <button onclick="reset()">Reset</button>
+    </p>
+</form>
+<table id="display">
+    <tr>
+        <th colspan="6" height="50px" style="font-size: 25px">Product List</th>
+    </tr>
+    <tr>
+        <th>STT</th>
+        <th>Ten</th>
+        <th>Hang</th>
+        <th>So Luong</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tbody id="result">
+    </tbody>
+</table>
+</body>
+</html>
+
+
+<script>
+    let arr = {
+           "name" : ["sang","chua","chieu"],
+        "ngaymai" :  ["mai","kia","kiaf"],
+        "homqua" :  ["qua","nay","mai"]
+    }
+    // hienthi();
+    // function hienthi(){
+    //     let str = "";
+    //     for (let i = 0; i < arr.length; i++) {
+    //         str += "<tr>" +
+    //             "        <td>" + arr[i][0] + "</td>" +
+    //             "        <td>" + arr[i][1] + "</td>" +
+    //             "        <td>" + arr[i][2] + "</td>" +
+    //             "        <td><button onclick='chiaTay(" + i + ")'>Delete</button></td>" +
+    //             "    </tr>"
+    //     }
+    //     document.getElementById("result").innerHTML = str;
+    // }
+    function them() {
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("magaer").value;
+        let sol = document.getElementById("soluong").value;
+        let arr2 = [name, age,sol];
+        arr.push(arr2);
+        console.log(arr)
+        hienthi();
+    }
+    function chiaTay(index) {
+        arr.splice(index, 1);
+        hienthi();
+    }
+</script>
